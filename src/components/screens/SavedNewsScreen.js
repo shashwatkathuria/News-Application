@@ -53,7 +53,7 @@ class SavedNewsScreen extends React.Component {
           <TouchableOpacity
             activeOpacity={constants.CLICK_OPACITY}
             onPress={() => this.toggleFilterMenu()}>
-            <FilterIcon/>
+            <FilterIcon color={constants.STANDARD_LIGHT}/>
           </TouchableOpacity>
         </View>
       )
