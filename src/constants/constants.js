@@ -6,4 +6,4 @@ export const ADD_FILTER = 'ADD_FILTER';
 export const REMOVE_FILTER = 'REMOVE_FILTER';
 export const CLEAR_FILTERS = 'CLEAR_FILTERS';
 
-export const NEWS_API_URL = 'http://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=5154c00fe4264a80bdc7db81cb5d8cdc';
+export const NEWS_API_URL = 'https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=5154c00fe4264a80bdc7db81cb5d8cdc';

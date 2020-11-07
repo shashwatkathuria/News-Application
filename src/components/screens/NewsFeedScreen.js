@@ -71,9 +71,10 @@ class NewsFeedScreen extends React.Component {
         newsArticles: this.props.newsArticles,
         forceRefresh: false
       });
-    } else if ((prevProps.newsArticles[0].title !== this.props.newsArticles[0].title) && this.state.awaitingArticles.length === 0) {
-        console.log('hjkgh');
+    } else if (prevProps.newsArticles.length > 0 && this.props.newsArticles.length > 0 && (prevProps.newsArticles[0].title !== this.props.newsArticles[0].title) && this.state.awaitingArticles.length === 0) {
         this.setState({ awaitingArticles: this.props.newsArticles });
+    } else if (prevProps.newsArticles.length === 0 && this.props.newsArticles.length > 0) {
+      this.setState({ newsArticles: this.props.newsArticles });
     }
   }
 
