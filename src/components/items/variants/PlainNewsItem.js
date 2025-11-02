@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import moment from 'moment';
 import { useNavigation } from '@react-navigation/native';
 import { constants, commonNewsItemStyles as commonStyles } from '../../../stylesheets/main';
 import MetadataRow from '../MetadataRow';

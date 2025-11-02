@@ -1,11 +1,9 @@
 import React from 'react';
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import { connect } from 'react-redux';
-import { fetchNewsArticles } from '../../actions/NewsActions';
 import NewsItem from '../items/NewsItem';
 import NewsItemModal from '../common/NewsItemModal';
 import FilterMenu from '../filter/menu/FilterMenu';
-import LoadingSpinner from '../common/LoadingSpinner';
 import { SavedIllustrationIcon, FilterIcon } from '../common/Icons';
 import { constants, savedNewsScreenStyles as styles } from '../../stylesheets/main';
 

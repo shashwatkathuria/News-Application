@@ -1,22 +1,24 @@
 import * as constants from '../constants/constants';
 
 export const fetchNewsArticles = () => {
-
   return function(dispatch) {
-        return fetch(constants.NEWS_API_URL).then((response) => response.json())
-        .then((json) => {
-            dispatch({
-              type: constants.FETCH_NEWS_ARTICLES,
-              payload: json.articles
-            });
-        })
-        .catch((error) => {
+    const news_api_url = constants.NEWS_API_URLS[Math.floor(Math.random() * constants.NEWS_API_URLS.length)];
+    console.log(news_api_url);
+    return fetch(news_api_url)
+      .then((response) => response.json())
+      .then((json) => {
           dispatch({
-            type: 'ACTION_DOESNT_EXIST',
-            payload: []
+            type: constants.FETCH_NEWS_ARTICLES,
+            payload: json.articles
           });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'ACTION_DOESNT_EXIST',
+          payload: []
         });
-    };
+      });
+  };
 }
 
 export const saveNewsArticle = (newsArticle) =>  {

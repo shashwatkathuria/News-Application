@@ -82,9 +82,10 @@ class FilterMenu extends React.Component {
       outputRange: [-1, 0, 0],
     });
 
+    const { key, ...safePanHandlers } = this.panResponders.panHandlers;
+
     return (
       <Modal
-        animated
         animationType='fade'
         visible={this.props.visible}
         transparent
@@ -94,7 +95,7 @@ class FilterMenu extends React.Component {
           onPress={() => this.handleDismiss()}
           style={styles.overlay}>
 
-            <Animated.View {...this.panResponders.panHandlers} style={{...styles.modalContainer, top }}>
+            <Animated.View {...safePanHandlers} style={{ ...styles.modalContainer, top }}>
               <View style={{...styles.headingContainer }}>
                 <SolidFilterIcon color={constants.STANDARD_LIGHT} />
                 <Text style={styles.headingText}>

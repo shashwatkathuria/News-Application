@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import moment from 'moment';
 import { constants, commonNewsItemStyles as commonStyles } from '../../stylesheets/main';
 import { MoreIcon } from '../common/Icons';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
+
 
 const MetadataRow = (props) => {
   return (
@@ -15,7 +18,7 @@ const MetadataRow = (props) => {
           {props.article.source.name}
         </Text>
         <Text style={{...commonStyles.extraDataText, ...commonStyles.commonText, color: constants.THEME }}>
-           {' | ' + moment(props.article.publishedAt).fromNow()}
+           {' | ' + dayjs(props.article.publishedAt).fromNow()}
         </Text>
       </View>
       <TouchableOpacity

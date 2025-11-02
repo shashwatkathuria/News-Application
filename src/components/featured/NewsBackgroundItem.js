@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { ImageBackground, Text, TouchableOpacity,  View } from 'react-native';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
 import { useNavigation } from '@react-navigation/native';
 import { constants, newsBackgroundItemStyles as commonStyles, newsCarouselItemStyles as carouselItemStyles, newsHeadlineItemStyles as headlineItemStyles } from '../../stylesheets/main';
 import { MoreIcon } from '../common/Icons';
@@ -25,7 +27,7 @@ const NewsBackgroundItem = (props) => {
                     {props.article.source.name}
                   </Text>
                   <Text style={commonStyles.newsTopText}>
-                    {moment(props.article.publishedAt).fromNow()}
+                    {dayjs(props.article.publishedAt).fromNow()}
                   </Text>
                 </View>
 
