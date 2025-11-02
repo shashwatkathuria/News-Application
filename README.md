@@ -20,7 +20,7 @@ yarn
 
 ## Step 2: Build and install the app on emulator/phone
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app. Also, whenever a new library/configuration is added, run this command to build and reinstall the app on emulator/phone:
 
 ### Android
 
@@ -102,6 +102,10 @@ Connect device via WiFi:
 - adb shell input keyevent 82 (Opens dev menu in debug app) or alternatively press 'd' in npm run start
 - Go to settings -> Debug server host & port for device
 - Enter ip address of dev env, 192.168.1.<ip address of dev env>:8081
+
+To add app icon in relevant android/ios locations from a given png:
+- Package used: @bam.tech/react-native-make
+- npx react-native set-icon --path ./assets/icon.png
 
 ### Now what?
 
