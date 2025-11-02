@@ -82,9 +82,9 @@ You've successfully run and modified your React Native App. :partying_face:
 
 Java Development Kit installed using sdk man. http://sdkman.io/install/
 
-Node version: 24.11.0
-NPM version: 11.6.1
-Java Version: IBM Semeru Runtime Open Edition 17.0.17.0
+- Node version: 24.11.0
+- NPM version: 11.6.1
+- Java Version: IBM Semeru Runtime Open Edition 17.0.17.0
 
 ## Notes: Android emulator
 
