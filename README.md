@@ -107,6 +107,14 @@ To add app icon in relevant android/ios locations from a given png:
 - Package used: @bam.tech/react-native-make
 - npx react-native set-icon --path ./assets/icon.png
 
+To generate release apk:
+- Make code changes as done in: [Code changes for release apk generation](https://github.com/shashwatkathuria/News-Application/commit/4a023c2d6c831696e0874f75a6e2cf9254ac3b1e)
+- Generate keystore
+- keytool -genkeypair -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+- Go inside android/ folder in the terminal
+- ./gradlew assembleRelease
+- Generated apk will be present at this location: android/app/build/outputs/apk/release/app-release.apk
+
 ### Now what?
 
 - If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
