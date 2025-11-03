@@ -86,7 +86,9 @@ Java Development Kit installed using sdk man. http://sdkman.io/install/
 - NPM version: 11.6.1
 - Java Version: IBM Semeru Runtime Open Edition 17.0.17.0
 
-## Notes: Android emulator
+## Notes:
+
+### Android Emulator
 
 Enable usb debugging, and wireless debugging on your mobile. Make sure the dev environment and mobile are on the same network if using wireless debugging.
 
@@ -103,9 +105,13 @@ Connect device via WiFi:
 - Go to settings -> Debug server host & port for device
 - Enter ip address of dev env, 192.168.1.<ip address of dev env>:8081
 
+### App Icon
+
 To add app icon in relevant android/ios locations from a given png:
 - Package used: @bam.tech/react-native-make
 - npx react-native set-icon --path ./assets/icon.png
+
+### Release APK Generation
 
 To generate release apk:
 - Make code changes as done in: [Code changes for release apk generation](https://github.com/shashwatkathuria/News-Application/commit/4a023c2d6c831696e0874f75a6e2cf9254ac3b1e)
